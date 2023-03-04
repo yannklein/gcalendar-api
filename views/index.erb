@@ -1,0 +1,11 @@
+<h1>Events</h1>
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <a href="<%= event.html_link %>">ID: <%= event.id %></a>
+      <p>Title: <%= event.summary %></p>
+      <p>From: <%= event.start.date_time&.strftime("%m/%d/%Y at %I:%M%p")%></p>
+      <p>to: <%= event.end.date_time&.strftime("%m/%d/%Y at %I:%M%p") %></p>
+    </li>
+  <% end %>
+</ul>
